@@ -5,6 +5,7 @@ using UnityEngine;
 using UniRx;
 using Cysharp.Threading.Tasks;
 using UnityEngine.SceneManagement;
+
 public class GameManager : MonoBehaviour
 {
     [SerializeField] GameObject _player1Win = null;
@@ -15,6 +16,12 @@ public class GameManager : MonoBehaviour
 
     // カプセル化したプロパティを公開
     public IReadOnlyReactiveProperty<PlayerController.PlayerType> CurrentPlayer => _currentPlayer;
+
+    private void Awake()
+    {
+        _currentPlayer = new ReactiveProperty<PlayerController.PlayerType>();
+        _currentPlayer.Value = PlayerController.PlayerType.None;
+    }
 
     private void Start()
     {
@@ -45,5 +52,10 @@ public class GameManager : MonoBehaviour
     {
         // シーンの非同期読み込み
         await SceneManager.LoadSceneAsync(sceneName);
+    }
+
+    private void OnDestroy()
+    {
+        _currentPlayer.Dispose();
     }
 }
