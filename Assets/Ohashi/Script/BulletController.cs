@@ -32,7 +32,7 @@ public class BulletController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(TryGetComponent<IDamageable>(out IDamageable damageable))
+        if(collision.gameObject.TryGetComponent<IDamageable>(out IDamageable damageable))
         {
             damageable.Damage();
             Destroy(gameObject);
