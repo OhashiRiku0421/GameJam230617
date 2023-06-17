@@ -6,6 +6,8 @@ using UnityEngine;
 // 日本語対応
 public class PlayerController : MonoBehaviour, IDamageable
 {
+    public PlayerType CurrentPlayerType => _playerType;
+
     [SerializeField] private PlayerType _playerType = PlayerType.None;
     [SerializeField] private KeyCode _up = KeyCode.None;
     [SerializeField] private KeyCode _left = KeyCode.None;
