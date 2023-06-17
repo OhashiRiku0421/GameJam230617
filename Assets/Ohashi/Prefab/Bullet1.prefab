@@ -139,6 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movePower: 12
   _maxCollisionCount: 3
+  _clip: {fileID: 8300000, guid: 84394d0b56107e842a6b51c652d30aca, type: 3}
 --- !u!96 &2047973574
 TrailRenderer:
   serializedVersion: 2
