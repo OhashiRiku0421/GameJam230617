@@ -156,8 +156,8 @@ MonoBehaviour:
   _right: 100
   _speed: 5
   _shootKey: 32
-  _muzzle: {fileID: 4327901723534207226}
-  _bullet: {fileID: 5762317933977417060}
+  _muzzle: {fileID: 7486695797587582904}
+  _bullet: {fileID: 8816148945816192987, guid: 8a3e27e48f5a1e94194a16048b26ef5a, type: 3}
 --- !u!1 &4327901723534207227
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,7 +314,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 10
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
