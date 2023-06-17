@@ -15,9 +15,11 @@ public class PlayerController : MonoBehaviour, IDamageable
     [SerializeField] private KeyCode _right = KeyCode.None;
     [SerializeField] private float _speed = 1f;
     [SerializeField] private KeyCode _shootKey = KeyCode.None;
+    [SerializeField] private float _interval = 1f;
     [SerializeField] private Transform _muzzle = null;
     [SerializeField] private GameObject _bullet = null;
     private Rigidbody2D _rb2d = null;
+    private float _timer = 0f;
 
     private void Start()
     {
@@ -43,9 +45,12 @@ public class PlayerController : MonoBehaviour, IDamageable
         }
         _rb2d.velocity = dirOfTravel;
 
-        if (Input.GetKeyDown(_shootKey))
+        _timer += Time.deltaTime;
+
+        if (_timer > _interval && Input.GetKeyDown(_shootKey))
         {
             Instantiate(_bullet, _muzzle.position, transform.rotation);
+            _timer = 0f;
         }
     }
 

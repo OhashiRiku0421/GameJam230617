@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4327901722145758499}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 1, z: 0}
+  m_LocalScale: {x: 0.7, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5484747063151622830}
@@ -154,8 +154,9 @@ MonoBehaviour:
   _left: 97
   _down: 115
   _right: 100
-  _speed: 5
   _shootKey: 32
+  _speed: 3
+  _interval: 1
   _muzzle: {fileID: 7486695797587582904}
   _bullet: {fileID: 8816148945816192987, guid: 8a3e27e48f5a1e94194a16048b26ef5a, type: 3}
 --- !u!1 &4327901723534207227
