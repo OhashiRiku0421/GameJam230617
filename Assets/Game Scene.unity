@@ -530,6 +530,10 @@ PrefabInstance:
       propertyPath: _bullet
       value: 
       objectReference: {fileID: 8816148945816192987, guid: 8a3e27e48f5a1e94194a16048b26ef5a, type: 3}
+    - target: {fileID: 4327901722145758498, guid: 5f5548637bb6eeb40bb1065d447b3179, type: 3}
+      propertyPath: _onDestroyEffect
+      value: 
+      objectReference: {fileID: 6757729832539914099, guid: 52659d26886938e448a917383205b579, type: 3}
     - target: {fileID: 4327901722145758499, guid: 5f5548637bb6eeb40bb1065d447b3179, type: 3}
       propertyPath: m_Name
       value: Player1
@@ -768,7 +772,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.016129017, y: 0.016129017, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -2148,7 +2152,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.016129017, y: 0.016129017, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 3
@@ -7097,6 +7101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2014058028}
   - component: {fileID: 2014058027}
+  - component: {fileID: 2014058029}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -7133,6 +7138,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2014058029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014058026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1ac59abd76626944b6c63a55a7d416a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2036835817
 PrefabInstance:
   m_ObjectHideFlags: 0
