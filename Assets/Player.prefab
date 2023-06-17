@@ -160,6 +160,7 @@ MonoBehaviour:
   _interval: 1
   _muzzle: {fileID: 7486695797587582904}
   _bullet: {fileID: 8816148945816192987, guid: 8a3e27e48f5a1e94194a16048b26ef5a, type: 3}
+  _onDestroyEffect: {fileID: 6757729832539914099, guid: 52659d26886938e448a917383205b579, type: 3}
   _se: {fileID: 8300000, guid: 7cbf9b39de12b794c990e8f29ac8c7dd, type: 3}
   _destroySe: {fileID: 8300000, guid: 7b485edbf15f9eb4d8cb6e2aa0df3590, type: 3}
 --- !u!1 &4327901723534207227
