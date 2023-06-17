@@ -4,7 +4,7 @@ using Cysharp.Threading.Tasks;
 public class GimmickPortal : MonoBehaviour
 {
     [SerializeField] List<GameObject> _portalPrefab;
-
+    [SerializeField] Sprite _sprite;
     private void Start()
     {
         foreach (var portal in _portalPrefab)
@@ -33,6 +33,8 @@ public class GimmickPortal : MonoBehaviour
             // ポータルのコライダーを一時的に無効化
             var portalCollider = selectedPortal.GetComponent<Collider2D>();
             portalCollider.enabled = false;
+            var portalCollar = selectedPortal.GetComponent<SpriteRenderer>();
+            portalCollar.sprite = _sprite;
             
             // ポータルから選択したポータルへの移動
             player.position = selectedPortal.transform.position;
