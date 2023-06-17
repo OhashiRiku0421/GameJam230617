@@ -8,9 +8,16 @@ public class FadeSystem : MonoBehaviour
     [SerializeField, Tooltip("Fade‚Ìƒpƒlƒ‹")]
     private Image _image;
 
+    [SerializeField]
+    bool _isStart = false;
+
     void Start()
     {
-        FadeIn();
+        if (_isStart)
+        {
+            FadeIn();
+        }
+
     }
 
     /// <summary>
