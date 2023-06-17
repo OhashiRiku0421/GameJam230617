@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 using Cysharp.Threading.Tasks;
-
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     // Enumの値を監視するReactiveProperty
@@ -26,5 +26,11 @@ public class GameManager : MonoBehaviour
     static public void ChangeCurrentPlayer(PlayerController.PlayerType player)
     {
         _currentPlayer.Value = player;
+    }
+    
+    public async UniTask LoadSceneAsync(string sceneName)
+    {
+        // シーンの非同期読み込み
+        await SceneManager.LoadSceneAsync(sceneName);
     }
 }
