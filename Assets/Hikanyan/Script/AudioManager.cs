@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioManager:MonoBehaviour
+public class AudioManager : MonoBehaviour
 {
     private AudioSource _bgmAudioSource;
     public void PlaySoundEffect(AudioClip clip)
