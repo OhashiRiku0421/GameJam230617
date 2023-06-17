@@ -173,6 +173,7 @@ MonoBehaviour:
   - {fileID: 921624156135761806}
   - {fileID: 921624155927929309}
   - {fileID: 921624155950254503}
+  _sprite: {fileID: 727569192, guid: 9bca17b0bceffd9488276da4d79a8788, type: 3}
 --- !u!50 &921624154531063103
 Rigidbody2D:
   serializedVersion: 4
