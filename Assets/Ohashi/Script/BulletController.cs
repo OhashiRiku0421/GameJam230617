@@ -11,6 +11,9 @@ public class BulletController : MonoBehaviour
     [SerializeField, Tooltip("îΩéÀâÒêî")]
     private int _maxCollisionCount = 5;
 
+    [SerializeField]
+    private AudioClip _clip;
+
     private Rigidbody2D _rb;
 
     private int _collisionCount = 0;
@@ -37,7 +40,7 @@ public class BulletController : MonoBehaviour
             damageable.Damage();
             Destroy(gameObject);
         }
-
+        AudioSource.PlayClipAtPoint(_clip, transform.position, 10);
         _collisionCount++;
     }
 }
