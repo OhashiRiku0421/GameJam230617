@@ -8,13 +8,17 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] AudioManager _audioManager;
+    
     [SerializeField] GameObject _player1Win = null;
     [SerializeField] GameObject _player2Win = null;
+
+    [SerializeField] private AudioClip _winAudioClip;
     // Enumの値を監視するReactiveProperty
     static ReactiveProperty<PlayerController.PlayerType> _currentPlayer = 
         new ReactiveProperty<PlayerController.PlayerType>(PlayerController.PlayerType.None);
 
-    // カプセル化したプロパティを公開
+    private bool isStop;
     public IReadOnlyReactiveProperty<PlayerController.PlayerType> CurrentPlayer => _currentPlayer;
 
     private void Awake()
@@ -28,13 +32,18 @@ public class GameManager : MonoBehaviour
         // Enumの値が変更されたらコンソールに出力するサンプル
         _currentPlayer.Subscribe(player =>
         {
+            if(isStop)return;
             switch (player)
             {
                 case PlayerController.PlayerType.Player1:
                     _player2Win.SetActive(true);
+                    _audioManager.PlaySoundEffect(_winAudioClip);
+                    isStop = true;
                     break;
                 case PlayerController.PlayerType.Player2:
                     _player1Win.SetActive(true);
+                    _audioManager.PlaySoundEffect(_winAudioClip);
+                    isStop = true;
                     break;
                 default: break;
             }
