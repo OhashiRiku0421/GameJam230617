@@ -8,7 +8,7 @@ using Cysharp.Threading.Tasks;
 public class GameManager : MonoBehaviour
 {
     // Enumの値を監視するReactiveProperty
-    private ReactiveProperty<PlayerController.PlayerType> _currentPlayer = new ReactiveProperty<PlayerController.PlayerType>(PlayerController.PlayerType.None);
+    static ReactiveProperty<PlayerController.PlayerType> _currentPlayer = new ReactiveProperty<PlayerController.PlayerType>(PlayerController.PlayerType.None);
 
     // カプセル化したプロパティを公開
     public IReadOnlyReactiveProperty<PlayerController.PlayerType> CurrentPlayer => _currentPlayer;
@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     }
 
     // Enumの値を変更するメソッド
-    public void ChangeCurrentPlayer(PlayerController.PlayerType player)
+    static public void ChangeCurrentPlayer(PlayerController.PlayerType player)
     {
         _currentPlayer.Value = player;
     }
