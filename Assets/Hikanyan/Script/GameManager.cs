@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
         // Enumの値が変更されたらコンソールに出力するサンプル
         _currentPlayer.Subscribe(player =>
         {
-            Debug.Log("Current player: " + player);
+            Debug.Log($"Victory is player name : {player}");
         });
     }
 
