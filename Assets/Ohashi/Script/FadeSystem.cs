@@ -25,6 +25,7 @@ public class FadeSystem : MonoBehaviour
     /// </summary>
     public void FadeOut(string sceneName)
     {
+    Debug.Log("‚Ó‚¥‚¢‚Ç");
         _image.enabled = true;
         _image.DOFade(1, 0.8f)
             .SetDelay(0.5f)
