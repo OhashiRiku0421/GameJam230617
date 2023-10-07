@@ -37,12 +37,12 @@ public class GameManager : MonoBehaviour
             {
                 case PlayerController.PlayerType.Player1:
                     _player2Win.SetActive(true);
-                    _audioManager.PlaySoundEffect(_winAudioClip);
+                    //_audioManager.PlaySoundEffect(_winAudioClip);
                     isStop = true;
                     break;
                 case PlayerController.PlayerType.Player2:
                     _player1Win.SetActive(true);
-                    _audioManager.PlaySoundEffect(_winAudioClip);
+                   // _audioManager.PlaySoundEffect(_winAudioClip);
                     isStop = true;
                     break;
                 default: break;
