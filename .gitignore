@@ -73,3 +73,6 @@ crashlytics-build.properties
 
 Assets/Local
 
+.idea/
+Assets/Font/
+Assets/Plugins/
