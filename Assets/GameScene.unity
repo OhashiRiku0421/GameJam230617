@@ -574,7 +574,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u2191 \u2190 \u2193 \u2192 + Pad_0 + R_Shift"
+  m_Text: "\u2191 \u2190 \u2193 \u2192 + Enter + R_Shift"
 --- !u!222 &978476706
 CanvasRenderer:
   m_ObjectHideFlags: 0
